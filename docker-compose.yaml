@@ -16,5 +16,10 @@ services:
     container_name: catalouge
     depends_on:
     - mongodb
-
+  user:
+    image: user
+    container_name: user:v1
+    depends_on:
+      - mongodb
+      - redis
 
